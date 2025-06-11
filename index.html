@@ -14,7 +14,7 @@
            }
         body {
        margin: 0;
-       height: 3000px;
+       height: 2250px;
        padding-left: 0px;
        padding-right: 0px;
        padding-bottom: 0px;
@@ -34,6 +34,12 @@
           left: 0;
           right: 0;
           
+        }
+        footer {
+          background-color: lightsalmon;
+          height: 120px;
+          font-family:"Roboto",sans-serif;
+          font-weight: bolder; 
         }
         .navbar >h3 {
           font-family:"Roboto",sans-serif;
@@ -126,6 +132,21 @@
           font-size: large;
         
         }
+        .Contacts {
+           font-weight: bolder;
+          font-family:"Roboto",sans-serif;
+          background-color:  rgb(107, 189, 171);
+          padding-left: 25px;
+          padding-right: 25px;
+          font-size: large;
+        
+        }
+        .contactinfo {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        align-items: center;
+        }
           
         .typesofskills {
                display: grid;
@@ -169,7 +190,7 @@
        <h3  onclick="location.href='#Projects'">Projects</h3>
        <h3  onclick="location.href='#Achievements'">Achievements</h3>
        <h3  onclick="location.href='#Skills'"> Skills</h3>
-       <h3>Contacts</h3>
+       <h3 onclick="location.href='#Contacts'">Contacts</h3>
        </nav>
        </div>
        
@@ -228,7 +249,7 @@
             <h2>Habeoprax</h2>
             <p>A smart, engaging habit tracking web application with Chrome extension that helps users build and maintain healthy habits through insightful statistics, motivational rewards, and an intuitive user interface.There are also badges based on streaks and weekly as well as monthly reports of the user.</p>
             <p>I worked on the backend part of the project implementing the login & signup using JWT and managing the overall flow of the data.</p>
-            <h3 style="font-size: 25px;">Tech Stack used: </h3>
+            <h3 style="font-size: 25px; color:#6a3d58;">Tech Stack used: </h3>
             <p>Frontend -> HTML,CSS,JS,React,Tailwind</p>
             <p>Backend -> Node,Express,Mongodb</p>
             <p>Notifications -> Nodemailer</p>
@@ -259,18 +280,18 @@
           <h2 >Skills</h2>
             <div class="typesofskills">
                    <div>
-                    <h3>
+                    <h3 style="color:#6a3d58;">
                    Technical Skills
                     </h3>
                      
-                     <h3>Languages</h3>
+                     <h3 style="color:#6a3d58;">Languages</h3>
                        <ul>
                         <li>C</li>
                         <li>C++</li>
                         <li>JS</li>
                         <li>Python</li>
                        </ul>
-                     <h3>Others</h3>
+                     <h3 style="color:#6a3d58;">Others</h3>
                      <ul>
                       <li>Express</li>
                       <li>Node</li>
@@ -285,7 +306,7 @@
 
                    </div>
                    <div>
-                   <h3>
+                   <h3 style="color:#6a3d58;">
                      Personal Skills
                      </h3>
                      <ul>
@@ -300,10 +321,59 @@
                    </div>
             </div>
         </div>
-   
-             
-     
+      
+        <div class="Contacts" id="Contacts">
+        <h2 >Contacts</h2>
+        <div class="contactinfo">
+          <div id="Gmail">
+           <a href='&#109;ai&#108;to&#58;anirudhn&#97;y%61%6&#66;%3&#49;50&#37;38&#37;&#52;0&#103;&#109;ai&#108;&#46;co%6D' style="text-decoration: none;">
+             <img src="images/icons8-gmail-48.png" alt="gmailLogo" >
+           </a>
+           <span style="position: relative; top: -15px;">
+            Gmail
+           </span>
+           
+        
+        </div>
+        
+        <div id="Phone">
+           <img src="images/icons8-phone-50.png" alt="phoneLogo">
+           <span style="position: relative; top: -15px;"> +91 7338219470</span>
+        </div>
+        <div id="Linkedin">
+          <a href="https://www.linkedin.com/in/anirudh-nayak-195713324/" style="text-decoration: none;">
+               <img src="/images/icons8-linkedin-50 (1).png" alt="linkedinLogo" >
+              
+          </a> <span style="position: relative; top: -15px;"> LinkedIn</span>
+        </div>
+        <div id="Github">
+          <a href="https://github.com/Anirudh-Nayak-CS" style="text-decoration: none;">
+            <img src="images/icons8-github-30.png" alt="githubLogo" style="height: 50px; ">
+          </a>   <span style="position: relative; top: -12px;"> Github</span>
+        </div>
+        <div id="Codechef">
+              <a href="https://www.codechef.com/users/anirudhnayak06" style="text-decoration: none;">
+                <img src="images/icons8-codechef-50.png" alt="codechefLogo" >
+            </a>  
+               <span style="position: relative; top: -12px;">Codechef</span>
+        </div>
+          <div id="Instagram">
+            <a href="https://www.instagram.com/anirudhnayakannu/" style="text-decoration: none;" >
+              <img src="images/icons8-instagram-48.png" alt="instagramLogo">
+            </a>
+            <span style="position: relative; top: -15px;">Instagram</span>
+          </div>
+        </div>
+        
 
+
+      </div>
+            
+      <footer>
+           <p style="padding-left: 750px; padding-top: 50px; font-size: x-large;">&copy; 2025 Anirudh Nayak.All rights reserved.</p>
+      </footer>
+     
+         
 
   </body>
   </html>
