@@ -9,19 +9,31 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <style>
-
+       html {
+          scroll-padding-top: 250px;
+           }
         body {
        margin: 0;
-       padding: 0;
+       height: 3000px;
+       padding-left: 0px;
+       padding-right: 0px;
+       padding-bottom: 0px;
+       padding-top: 0px;
+       background-image: url(/images/pawel-czerwinski-4QFs8sd5oos-unsplash.jpg)
         }
         
         .navbar {
           display: flex;
-          margin-left: 0px;
-          margin-top: 70px;
           justify-content: space-evenly;  
           align-items: center;
-             
+          position: fixed;
+          left: 200px;
+          z-index: 1;
+          background-color: lightsalmon;
+          top: 0;
+          left: 0;
+          right: 0;
+          
         }
         .navbar >h3 {
           font-family:"Roboto",sans-serif;
@@ -32,23 +44,35 @@
           padding-right: 10px;
           padding-bottom: 10px;
           padding-top: 10px;
-          color: black
+          color: black;
+          background-color: rgb(145, 165, 30);
+          cursor: pointer;
         
+        }
+        .navbar >h3:hover {
+          opacity: 0.6;
         }
         .navlogo {
           width: 60px;
           border-color: black;
           border-style: solid;
           height: 41px;
+          background-color: rgb(145, 165, 30);
         }
-     
+       .myPhoto {
+        margin-left: 800px;
+        margin-top: 200px;
+         
+       }
         #myPhoto {
-          width: 180px;
-          height: 180px;
-          border-radius: 90px;
-          margin-left: 850px;
-          margin-top: 90px;
+          width: 200px;
+          height: 200px;
+          border-radius: 100px;
           border-style: solid;
+          border-width: 5px;
+        }
+        #myPhoto:hover {
+          border-color: #6a3d58;
         }
         .description {
           font-size: 50px;
@@ -56,33 +80,29 @@
           font-family:"Roboto",sans-serif;
           margin-left: 480px;
           margin-right: 440px;
-          color: blueviolet;
-          
+          color: blueviolet;    
         }
-
       
         .aboutMe{
           font-weight: bolder;
           font-family:"Roboto",sans-serif;
-          background-color: greenyellow;
+          background-color:  rgb(107, 189, 171);
           padding-left: 25px;
           padding-right: 25px;
           font-size: large;
         }
         .Projects {
-            
           font-weight: bolder;
           font-family:"Roboto",sans-serif;
-          background-color: greenyellow;
+          background-color:  rgb(107, 189, 171);
           padding-left: 25px;
           padding-right: 25px;
-          font-size: large;
-        
+          font-size: large; 
         }
         .Education {
           font-weight: bolder;
           font-family:"Roboto",sans-serif;
-          background-color: greenyellow;
+          background-color:  rgb(107, 189, 171);
           padding-left: 25px;
           padding-right: 25px;
           font-size: large;
@@ -90,7 +110,7 @@
         .Achievements {
           font-weight: bolder;
           font-family:"Roboto",sans-serif;
-          background-color: greenyellow;
+          background-color:  rgb(107, 189, 171);
           padding-left: 25px;
           padding-right: 25px;
           font-size: large;
@@ -100,19 +120,20 @@
              
           font-weight: bolder;
           font-family:"Roboto",sans-serif;
-          background-color: greenyellow;
+          background-color:  rgb(107, 189, 171);
           padding-left: 25px;
           padding-right: 25px;
           font-size: large;
         
         }
           
-        .typesofSkills {
-              display: grid;
-              grid-template-columns: 100px 100px;
+        .typesofskills {
+               display: grid;
+               column-gap: 100px;
+        grid-template-columns: 1fr 1fr 1fr;
               font-weight: bolder;
           font-family:"Roboto",sans-serif;
-          background-color: greenyellow;
+       
           padding-left: 25px;
           padding-right: 25px;
           font-size: large;
@@ -128,24 +149,31 @@
           padding-left: 4px;
         }
 
+        h2 {
+          text-align: center;
+          color:#6a3d58;
+        }
+        
+      
+
     </style>
   </head>
   <body  >
-    <div style="background-color: lightsalmon; width:100%; padding-top: 10px; height: 18px;">
-      <p hidden>secret</p>
-    </div>
+   
+   
+    <div>
        <nav class="navbar">
        <img src="./images/navlogo.png"  alt="Logo" class="navlogo" >
-       <h3>About me</h3>
-       <h3>Education</h3>
-       <h3>Projects</h3>
-       <h3>Achievements</h3>
-       <h3>Skills</h3>
+       <h3 onclick="location.href='#aboutMe'">About me</h3>
+       <h3  onclick="location.href='#Education'">Education</h3>
+       <h3  onclick="location.href='#Projects'">Projects</h3>
+       <h3  onclick="location.href='#Achievements'">Achievements</h3>
+       <h3  onclick="location.href='#Skills'"> Skills</h3>
        <h3>Contacts</h3>
-       
+       </nav>
        </div>
        
-      </nav>
+      
     
       <div class="myPhoto">
        <img src="images/mypic.jpeg" alt="MyPhoto" id="myPhoto">
@@ -154,19 +182,19 @@
      <div>
       <p class="description">Hey, I'm <span style="color: blue; font-weight: bolder;">Anirudh Nayak.</span> Here you can look at what interests me, my skills & my education.</p>
      </div>
-  
+     <br><br><br><br><br>
      
-    <div class="majorcontent">
-      <div class="aboutMe">
-        <h2 style="color: blue;">About me!!</h2>
+
+      <div class="aboutMe" id="aboutMe">
+        <h2 >About me!!</h2>
        <p>
        I am a passionate Computer Science student currently pursuing B.TECH from NITK Surathkal.I love tackling problems which make me think regardless of whether I solve the problem or fail badly &#128518.I continuosly make effort in exploring the vast sea of Computer Science fields.I aim to upskill myself by learning new technologies.
        </p> 
+     
       </div>
-            
-   
-      <div class="Education">
-        <h2 style="color: blue;">Education</h2>
+    
+      <div class="Education" id="Education">
+        <h2 >Education</h2>
       
         <table>
           <tr>
@@ -193,8 +221,8 @@
     
       </div>
       
-        <div class="Projects">
-        <h2 style="color: blue;">Projects</h2>
+        <div class="Projects" id="Projects">
+        <h2 >Projects</h2>
        <p>
         
             <h2>Habeoprax</h2>
@@ -208,8 +236,8 @@
        </p> 
       </div>
 
-       <div class="Achievements">
-        <h2 style="color: blue;">Achievements</h2>
+       <div class="Achievements" id="Achievements">
+        <h2 >Achievements</h2>
          <ul>
           <li>
             <p>
@@ -224,23 +252,57 @@
              <p>Placed FIFTH in INCUB8 CTF event </p>
           </li>
          </ul>
-      </div>
-            
-        <div class="Skills">
-     <h2 style="color: blue;">Skills</h2>
+           
+      </div> 
+          
+        <div class="Skills" id="Skills">
+          <h2 >Skills</h2>
             <div class="typesofskills">
                    <div>
-                    <h2>Technical Skills</h2>
+                    <h3>
+                   Technical Skills
+                    </h3>
+                     
+                     <h3>Languages</h3>
+                       <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>JS</li>
+                        <li>Python</li>
+                       </ul>
+                     <h3>Others</h3>
+                     <ul>
+                      <li>Express</li>
+                      <li>Node</li>
+                      <li>MongoDB</li>
+                      <li>Git & Github</li>
+                      <li>Google colab</li>
+                      <li>VS Code</li>
+                      <li>HTML & CSS</li>
+                     </ul>
                    </div>
                    <div>
-                    <h2>Personal Skills</h2>
+
+                   </div>
+                   <div>
+                   <h3>
+                     Personal Skills
+                     </h3>
+                     <ul>
+                      <li>Problem Solving</li>
+                      <li>Leadership</li>
+                      <li>Communication</li>
+                      <li>Teamwork</li>
+                      <li>Time Management</li>
+                      <li>Critical Thinking</li>
+                     </ul>
+                   
                    </div>
             </div>
         </div>
    
              
-      </div>
-
+     
 
 
   </body>
