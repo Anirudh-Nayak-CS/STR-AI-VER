@@ -51,7 +51,7 @@
           padding-bottom: 10px;
           padding-top: 10px;
           color: black;
-          
+          background-color: #e7f06c;
           cursor: pointer;
         
         }
@@ -82,7 +82,7 @@
         }
         .description {
           font-size: 50px;
-          font-weight:bold;
+          font-weight: 500;
           font-family:"Roboto",sans-serif;
           margin-left: 575px;
           margin-right: 575px;
@@ -90,7 +90,7 @@
         }
       
         .aboutMe{
-          font-weight: bolder;
+          font-weight: 700;
           font-family:"Roboto",sans-serif;
           
           padding-left: 55px;
@@ -98,7 +98,7 @@
           font-size: large;
         }
         .Projects {
-          font-weight: bolder;
+            font-weight: 700;
           font-family:"Roboto",sans-serif;
           
           padding-left: 55px;
@@ -106,7 +106,7 @@
           font-size: large; 
         }
         .Education {
-          font-weight: bolder;
+            font-weight: 700;
           font-family:"Roboto",sans-serif;
      
           padding-left: 55px;
@@ -114,7 +114,7 @@
           font-size: large;
         }
         .Achievements {
-          font-weight: bolder;
+          font-weight: 700;
           font-family:"Roboto",sans-serif;
           
           padding-left: 55px;
@@ -124,7 +124,7 @@
           
         .Skills {
              
-          font-weight: bolder;
+            font-weight: 700;
           font-family:"Roboto",sans-serif;
           
           padding-left: 55px;
@@ -133,7 +133,7 @@
         
         }
         .Contacts {
-           font-weight: bolder;
+             font-weight: 700;
           font-family:"Roboto",sans-serif;
           
           padding-left: 55px;
@@ -152,7 +152,7 @@
                display: grid;
                column-gap: 100px;
         grid-template-columns: 1fr 1fr 1fr;
-              font-weight: bolder;
+               font-weight: 700;
           font-family:"Roboto",sans-serif;
        
           padding-left: 25px;
@@ -160,22 +160,47 @@
           font-size: large;
         }
 
-        table,th,td {
-          border:1px solid black;
-        }
-        th {
-          font-weight: bolder;
-        }
-        td {
-          padding-left: 4px;
-        }
-
+        
         h2 {
           text-align: center;
           color:#6a3d58;
         }
         
+        .textbox {
+          background-color: #e7e7e7;
+          padding:10px 50px;
+         
+        }
+        .timeline {
+          max-width: 1000px;
+           margin-left: 60px;
+          
+        }
+       .left-container {
+        width: 50%;
+        padding: 10px 50px;
+        font-family: "Roboto",sans-serif;
+        background-color: gray;
       
+        left: 0;
+       }
+       .right-container {
+        margin-left: 1000px;
+        width: 50%; 
+         padding: 10px 50px;
+        font-family: "Roboto",sans-serif;
+        left: 50%;
+        background-color: gray;
+       }
+
+       
+   
+
+
+
+
+
+
 
     </style>
   </head>
@@ -205,7 +230,7 @@
      </div>
      </div>
     
-     <br><br><br><br><br>
+     <br><br><br><br>
      
 
       <div class="aboutMe" id="aboutMe">
@@ -215,37 +240,31 @@
        </p> 
      
       </div>
-      <br><br><br><br><br>
+      <br><br><br>
       <div class="Education" id="Education">
-        <h2 >Education</h2>
-      
-        <table>
-          <tr>
-            <th>Education</th>
-            <th>Years of study</th>
-          </tr>
-          <tr>
-            <td>
-              B.Tech in Computer Science and Engineering Department, NITK 
-            </td>
-            <td >
-               Sept 2024-May 2028
-            </td>
-          </tr>
-          <tr>
-            <td>
-              CFAL 
-            </td>
-            <td >
-              May 2022-April 2024
-            </td>
-          </tr>
-        </table>
-    
+        <h2 >Education <img src="images/certificate_10819313.png" alt="educationLogo" style="height: 40px; position: relative; top: 10px;"></h2>
+       <div class="timeline">
+         <div class="left-container">
+          <div class="textbox">
+              <h3 style="color:#6a3d58;">B Tech CSE, NITK</h3>
+              <p>Sept 2024-May 2028</p>
+              <p>Presently a B Tech CSE student from NITK Surathkal.</p>
+          </div>
+
+         </div>
+          <div class="right-container">
+          <div class="textbox">
+              <h3 style="color:#6a3d58;">CFAL, Mangalore</h3>
+              <p>May 2022-May 2024</p>
+              <p>Completed 2 Years of PUC from CFAL Mangalore.</p>
+          </div>
+
+         </div>
+       </div>    
       </div>
-       <br><br><br><br><br>
+       <br><br><br><br>
         <div class="Projects" id="Projects">
-        <h2 >Projects</h2>
+        <h2 >Projects <img src="images/project.png" alt="projectLogo" style="height: 40px; position: relative; top: 10px;"></h2>
        
         
             <h2>Habeoprax</h2>
@@ -265,9 +284,9 @@
           
        </p> 
       </div>
- <br><br><br><br><br>
+ <br><br><br><br>
        <div class="Achievements" id="Achievements">
-        <h2 >Achievements</h2>
+        <h2 >Achievements 🏆 </h2>
          <ul>
           <li>
             <p>
@@ -276,17 +295,23 @@
             
           </li>
           <li>
-            <p>Placed FIFTH in the SHERLOCKED event,which tested participants on DSA,Web Dev,Systems & Security </p>
+            <p>Placed FIFTH in the SHERLOCKED event,which tested participants on DSA,Web Dev,Systems & Security.</p>
           </li>
           <li>
-             <p>Placed FIFTH in INCUB8 CTF event </p>
+             <p>Placed FIFTH in INCUB8 CTF event.</p>
+          </li>
+          <li>
+            <p>Secured AIR 2185(99.87 percentile) in JEE Mains out of 15.25 lakh students.</p>
+          </li>
+          <li>
+            <p>Secured AIR 4555 in JEE Advanced out of 2 lakh students.</p>
           </li>
          </ul>
            
       </div> 
-           <br><br><br><br><br>
+           <br><br><br><br>
         <div class="Skills" id="Skills">
-          <h2 >Skills</h2>
+          <h2 >Skills <img src="images/skill_17929069.png" alt="skillsLogo" style="height: 40px; position: relative; top: 5px;"></h2>
             <div class="typesofskills">
                    <div>
                     <h3 style="color:#6a3d58;">
@@ -311,6 +336,7 @@
                       <li> <img src="images/icons8-vs-code-48.png" alt="VS Code"></li>
                       <li><img src="./images/icons8-html-48.png" alt="HTML"></li>
                       <li> <img src="./images/icons8-css-48.png" alt="CSS"></li>
+                      <li><img src="images/images.jpeg" alt="Cisco packet tracer" style="height: 50px;"></li>
                       </ul>
               
                      
@@ -336,7 +362,7 @@
         </div>
        <br><br><br><br><br>
         <div class="Contacts" id="Contacts">
-        <h2 >Contacts</h2>
+        <h2 >Contacts & Links <img src="images/icons8-phone-50.png" alt="phoneLogo" style="height: 40px; position: relative; top: 10px;"></h2>
         <div class="contactinfo">
           <div id="Gmail">
            <a href='&#109;ai&#108;to&#58;anirudhn&#97;y%61%6&#66;%3&#49;50&#37;38&#37;&#52;0&#103;&#109;ai&#108;&#46;co%6D' style="text-decoration: none;">
@@ -383,7 +409,7 @@
       </div>
          <br><br>
       <footer>
-           <p style="padding-left: 750px; padding-top: 50px; font-size: x-large;">&copy; 2025 Anirudh Nayak.All rights reserved.</p>
+           <p style="padding-left: 750px; padding-top: 50px; font-size: x-large;">&copy; 2025 Anirudh Nayak. All rights reserved.</p>
       </footer>
      
          
