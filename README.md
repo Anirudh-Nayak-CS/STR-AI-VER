@@ -1,2 +1,2 @@
 # STR-AI-VER
-A  random repo
+My portfolio which is responsive for mobile and laptop/pc's.
