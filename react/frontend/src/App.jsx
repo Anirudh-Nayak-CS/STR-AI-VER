@@ -1,6 +1,7 @@
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import {Navbars} from './Navbars'
 import { HeroSection } from './HeroSection'
+import { MarqueeLanding} from './Marquee'
 function App() {
   
 
@@ -10,6 +11,9 @@ function App() {
          
            <Navbars/>
            <HeroSection/>
+           <MarqueeLanding/>
+           <br />
+           <br /><br /><br /><br />
           </Router>
     </>
   )
