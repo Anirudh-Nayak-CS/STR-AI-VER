@@ -1,6 +1,7 @@
 
- import {Navbarl} from "./Navbarl"
+
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
+import { Landingpage } from "./Landingpage"
 import { Homepage } from "./Homepage"
 
 
@@ -8,10 +9,10 @@ function App() {
   return (
    <>
    <Router>
-   <Navbarl/>
-   <Routes>
-    <Route path="/" element={<Homepage/>}/>
    
+   <Routes>
+    <Route path="/" element={<Landingpage/>}/>
+    <Route path="/home" element={<Homepage/>}/>
    </Routes>
    </Router>
    

@@ -2,7 +2,6 @@
 import {
   Navbar,
   NavBody,
-  NavItems,
   MobileNav,
   NavbarLogo,
   MobileNavHeader,
@@ -16,19 +15,9 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 
 
-export function Navbarl() {
+export function Navbarh() {
   const {loginWithRedirect,isAuthenticated,logout } = useAuth0();
-  const navItems = [
-    {
-      name: "Features",
-      link: "#features",
-    },
-    {
-      name: "Pricing",
-      link: "#pricing",
-    },
-   
-  ];
+ 
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -38,7 +27,7 @@ export function Navbarl() {
        
         <NavBody>
           <NavbarLogo />
-          <NavItems items={navItems} />
+         
  
 <div className="ml-auto flex items-center gap-4 z-50 cursor-pointer">
   {isAuthenticated ? (
@@ -75,16 +64,7 @@ export function Navbarl() {
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
           >
-            {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
-              >
-                <span className="block">{item.name}</span>
-              </a>
-            ))}
+         
               {
           isAuthenticated ? <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
       Log Out
@@ -97,5 +77,3 @@ export function Navbarl() {
     </div>
   );
 }
-
-
