@@ -31,7 +31,7 @@ export function Features() {
 
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-         Algobuddy has a free tier. Get the best solutions explained in a structured manner for free.
+         AlgoBuddy has a free tier. Get the best solutions explained in a structured manner for free.
                  </p>
       </WobbleCard>
        <WobbleCard containerClassName="col-span-1 min-h-[300px]">
@@ -40,7 +40,7 @@ export function Features() {
 
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-         Save your  questions and revisit the session where ALGOBuddy discussed its solution.
+         Save your  questions and revisit the session where AlgoBuddy discussed its solution.
                  </p>
       </WobbleCard>
            <WobbleCard
@@ -52,7 +52,7 @@ export function Features() {
            Code correction
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-             See why the testcases were failing with ALGOBuddy's code correction feature.
+             See why the testcases were failing with AlgoBuddy's code correction feature.
           </p>
         </div>
         <img

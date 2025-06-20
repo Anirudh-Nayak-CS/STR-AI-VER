@@ -1,12 +1,14 @@
-
-import { Features } from "./Features2";
-import { HeroSection } from "./Herosection";
+import { Navbarh} from "./Navbarh";
+import { Textareah } from "./Textarea";
 
 export function Homepage() {
-  return (
-    <>
-     <HeroSection/>
-     <Features/>
-    </>
-  )
+ return (
+  <>
+<Navbarh/>
+<Textareah/>
+  </>
+ )
+
+
 }
+
