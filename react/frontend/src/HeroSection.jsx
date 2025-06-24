@@ -55,7 +55,7 @@ export function HeroSection() {
             delay: 0.8,
           }}
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400">
-          With our SDE Sheets,System Design ,OOPS,DBMS,CN you will be ready for your next interview.
+          With our SDE Sheets,System Design ,OOPS & DBMS you will be ready for your next interview.
          
         </motion.p>
         <motion.div

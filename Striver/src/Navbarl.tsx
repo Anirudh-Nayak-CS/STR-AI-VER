@@ -9,15 +9,15 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import { useState } from "react";
+import {useState } from "react";
 
 import { useAuth0 } from "@auth0/auth0-react";
-
-
+import { ModeToggle } from "./Mode-toggle";
 
 
 export function Navbarl() {
   const {loginWithRedirect,isAuthenticated,logout } = useAuth0();
+
   const navItems = [
     {
       name: "Features",
@@ -52,13 +52,17 @@ export function Navbarl() {
     </button>
   ) : (
     <button
-      onClick={() => loginWithRedirect()}
+      onClick={() => loginWithRedirect()
+       
+      } 
       className="px-4 py-2 bg-blue-600 text-white rounded"
     >
       Log In
     </button>
   )}
+ <ModeToggle/>
 </div>
+  
         </NavBody>
 
       
@@ -90,6 +94,7 @@ export function Navbarl() {
       Log Out
     </button>: <button onClick={() => loginWithRedirect()}>Log In</button>
          }
+         <ModeToggle/>
           </MobileNavMenu>
         </MobileNav>
       </Navbar>

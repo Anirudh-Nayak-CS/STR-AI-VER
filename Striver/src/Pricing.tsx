@@ -2,7 +2,7 @@
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="relative z-10 overflow-hidden bg-white pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px] m-8">
+    <section id="pricing" className="relative z-10 overflow-hidden bg-white dark:bg-black pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px] m-8">
       <div className="container mx-auto">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
@@ -18,45 +18,50 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="-mx-4 flex flex-wrap justify-center">
+        <div className="-mx-4 flex flex-wrap justify-center  ">
           <div className="-mx-4 flex flex-wrap">
-            <PricingCard
+      
+         <PricingCard
               type="Free Plan"
               price="$0"
               subscription="year"
-              description="Perfect for using in a personal website or a client project."
+              description="Default option"
               buttonText="Current plan"
             >
               <List>1 User</List>
               <List>Lifetime access</List>
               <List>Access to some updates</List>
-              <List>1 week Pro Tier free</List>
+              <List>1 week Pro Tier free </List>
+           
             </PricingCard>
+          
+             
+          
             <PricingCard
               type="Pro"
               price="$15"
               subscription="year"
-              description="Perfect for using in a personal website or a client project."
+                description="Perfect for an individual"
               buttonText="Choose Pro"
               active
             >
                   <List>1 User</List>
               <List>1 year access</List>
               <List>Access to all updates</List>
-              <List>Get topic-wise questions, DSA Roadmap etc..</List>
+              <List>Get topic-wise questions,DSA Roadmap</List>
 
             </PricingCard>
             <PricingCard
               type="Pack"
               price="$50"
               subscription="year"
-              description="Perfect for using in a personal website or a client project."
+              description="Great for small groups."
               buttonText="Choose Pack"
             >
               <List>3-5 Users</List>
               <List>1 Year access</List>
               <List>Access to all updates</List>
-              <List>Get topic-wise questions, DSA Roadmap etc..</List>
+              <List>Get topic-wise questions,DSA Roadmap</List>
         
             </PricingCard>
           </div>
@@ -93,8 +98,8 @@ children,
 }:Pricing2) => {
   return (
     <>
-      <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div className="relative z-10 mb-10 overflow-hidden rounded-[10px] border-2 border-stroke bg-white px-8 py-10 shadow-pricing dark:border-dark-3 dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
+      <div className=" w-full px-4 md:w-1/2 lg:w-1/3">
+        <div className="relative z-10 mb-10 overflow-hidden rounded-[10px] border-2 border-stroke bg-white  dark:bg-black px-8 py-10 shadow-pricing dark:border-dark-3 dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-[50px]">
           <span className="mb-3 block text-lg font-semibold text-primary">
             {type}
           </span>
@@ -112,8 +117,8 @@ children,
             href="/#"
             className={` ${
               active
-                ? "block w-full rounded-md border border-primary bg-primary p-3 text-center text-base font-medium text-white transition hover:bg-opacity-90"
-                : "block w-full rounded-md border border-stroke bg-transparent p-3 text-center text-base font-medium text-primary transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3"
+                ? "block w-full rounded-md border border-primary bg-primary p-3 text-center text-base font-medium text-white dark:hover:bg-black hover:bg-white transition hover:bg-opacity-90 hover:text-black dark:hover:text-white dark:text-black"
+                : "block w-full rounded-md border border-stroke bg-transparent p-3 text-center text-base font-medium text-primary transition hover:border-primary hover:bg-primary hover:text-white  dark:hover:text-black dark:border-dark-3"
             } `}
           >
             {buttonText}

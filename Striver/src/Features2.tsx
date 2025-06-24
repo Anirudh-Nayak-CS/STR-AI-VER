@@ -1,8 +1,9 @@
-"use client";
+import code from "./assets/code.jpg"
 import { WobbleCard } from "./components/ui/wobblecard";
-
+import list from "./assets/list.png"
 
 export function Features() {
+
   return (
     <div  id="features" className="grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
       <WobbleCard
@@ -18,11 +19,11 @@ export function Features() {
           </p>
         </div>
         <img
-          src="/linear.webp"
+          src={code}
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-10 object-contain rounded-2xl "
         />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
@@ -34,13 +35,13 @@ export function Features() {
          AlgoBuddy has a free tier. Get the best solutions explained in a structured manner for free.
                  </p>
       </WobbleCard>
-       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+       <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-green-600">
         <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-         Save progress
+        Code correction
 
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-         Save your  questions and revisit the session where AlgoBuddy discussed its solution.
+         See why the testcases were failing with AlgoBuddy's code correction feature. 
                  </p>
       </WobbleCard>
            <WobbleCard
@@ -49,18 +50,18 @@ export function Features() {
       >
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-           Code correction
+           Revision List!!
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-             See why the testcases were failing with AlgoBuddy's code correction feature.
+            Save your  questions and solutions to revisit them later.
           </p>
         </div>
         <img
-          src="/linear.webp"
+          src={list}
           width={500}
           height={500}
           alt="linear demo image"
-          className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+          className="absolute -right-4 lg:-right-[10%] grayscale filter -bottom-10 object-contain rounded-2xl "
         />
       </WobbleCard>
    

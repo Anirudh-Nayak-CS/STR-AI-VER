@@ -1,49 +1,72 @@
-"use client";
+
 import {
   Navbar,
   NavBody,
   NavItems,
   MobileNav,
   NavbarLogo,
-  NavbarButton,
   MobileNavHeader,
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
-import { useState } from "react";
- 
-export function NavbarDemo() {
+import {useState } from "react";
+import { ModeToggle } from "./Mode-toggle";
+import { useAuth0 } from "@auth0/auth0-react";
+
+
+export function Navbars() {
+  const {loginWithRedirect,isAuthenticated,logout } = useAuth0();
+
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "Ask a Doubt",
+      link: "/home",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "Profile",
+      link: "/profile",
     },
-    {
-      name: "Contact",
-      link: "#contact",
-    },
+   
   ];
- 
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
- 
+
   return (
     <div className="relative w-full">
       <Navbar>
-        
+       
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
-            <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
-          </div>
-        </NavBody>
  
-  
+<div className="ml-auto flex items-center gap-4 z-50 cursor-pointer">
+  {isAuthenticated ? (
+    <button
+      onClick={() =>
+        logout({ logoutParams: { returnTo: window.location.origin } })
+      }
+      className="px-4 py-2 bg-red-600 text-white rounded"
+    >
+      Log Out
+    </button>
+  ) : (
+    <button
+      onClick={() => loginWithRedirect()
+       
+      } 
+      className="px-4 py-2 bg-blue-600 text-white rounded"
+    >
+      Log In
+    </button>
+  )}
+  <div className="mt-4">
+  <ModeToggle />
+</div>
+
+</div>
+        </NavBody>
+
+      
         <MobileNav>
           <MobileNavHeader>
             <NavbarLogo />
@@ -52,7 +75,7 @@ export function NavbarDemo() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             />
           </MobileNavHeader>
- 
+
           <MobileNavMenu
             isOpen={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
@@ -67,28 +90,19 @@ export function NavbarDemo() {
                 <span className="block">{item.name}</span>
               </a>
             ))}
-            <div className="flex w-full flex-col gap-4">
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Login
-              </NavbarButton>
-              <NavbarButton
-                onClick={() => setIsMobileMenuOpen(false)}
-                variant="primary"
-                className="w-full"
-              >
-                Book a call
-              </NavbarButton>
-            </div>
+              {
+          isAuthenticated ? <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+      Log Out
+    </button>: <button onClick={() => loginWithRedirect()}>Log In</button>
+         }
+        <ModeToggle/>
           </MobileNavMenu>
+           
         </MobileNav>
       </Navbar>
-
- 
-     
+    
     </div>
   );
 }
+
+
