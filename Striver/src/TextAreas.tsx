@@ -49,8 +49,8 @@ export function Chat() {
      else if(Usererror)
         console.log(Usererror)
   let uid=Userdata?.user_id
-    let {data:usermesg,error:usererr}=await supabase.from('chatmessages').upsert([{...usermsg,user_id:uid}])
-    let {data,error}=await supabase.from('chatmessages').upsert([{...botmsg,user_id:uid}])
+    let {error:usererr}=await supabase.from('chatmessages').upsert([{...usermsg,user_id:uid}])
+    let {error}=await supabase.from('chatmessages').upsert([{...botmsg,user_id:uid}])
    
     
    if(error || usererr) {
@@ -78,7 +78,7 @@ export function Chat() {
      else if(Usererror)
         console.log(Usererror)
       let uid=Userdata?.user_id
-          let {data,error}=await supabase.from('saved_questions').upsert([{question:usermsg,solution:botmsg,user_id:uid}])
+          let {error}=await supabase.from('saved_questions').upsert([{question:usermsg,solution:botmsg,user_id:uid}])
   
    
    
