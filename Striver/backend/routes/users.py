@@ -1,7 +1,7 @@
-from fastapi import APIRouter,Depends
+from fastapi import APIRouter,Depends, HTTPException
 from sqlmodel import Session, select
-from ..models.models import User
-from ..db import get_session
+from models.models import User
+from db import get_session
 from fastapi import Depends
 
 router = APIRouter(prefix="/users", tags=["Users"])
@@ -16,4 +16,7 @@ def create_user(user: User,session: Session = Depends(get_session)):
 @router.get("/{user_id}",response_model=User)
 def get_user(user_id: int, session: Session = Depends(get_session)):
     user = session.get(User, user_id)
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    
     return user

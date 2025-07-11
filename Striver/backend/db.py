@@ -1,8 +1,9 @@
-from .models.models import *
+from models.models import *
 from sqlmodel import SQLModel,create_engine,Session
-import os
+from config import get_settings 
 
-postgres_url=os.environ["VITE_POSTGRES_URL"]
+
+postgres_url=get_settings().vite_postgres_url
 
 engine=create_engine(postgres_url,echo=True)
 

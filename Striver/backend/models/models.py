@@ -15,7 +15,7 @@ class Question(SQLModel, table= True):
     description:str
     user_id: int = Field(foreign_key="user.user_id")
     user: Optional["User"] = Relationship(back_populates="questions")
-    answers: List["Answer"] = Relationship(back_populates="questions")
+    answers: List["Answer"] = Relationship(back_populates="question")
 
 
 class Answer(SQLModel, table= True):
@@ -24,4 +24,4 @@ class Answer(SQLModel, table= True):
     user_id:int=Field(foreign_key="user.user_id")
     question_id: int = Field(foreign_key="question.question_id")
     user: Optional["User"] = Relationship(back_populates="answers")
-    questions: Optional["Question"] = Relationship(back_populates="answers")
+    question: Optional["Question"] = Relationship(back_populates="answers")
