@@ -17,6 +17,6 @@ def create_user(user: User,session: Session = Depends(get_session)):
 def get_user(user_id: int, session: Session = Depends(get_session)):
     user = session.get(User, user_id)
     if not user:
-        raise HTTPException(status_code=404, detail="User not found")
+        raise HTTPException(status_code=404, detail="User not found.")
     
     return user
