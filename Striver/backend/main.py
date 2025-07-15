@@ -6,7 +6,6 @@ from routes.answers import router as answers_router
 from routes.questions import router as questions_router
 from routes.users import router as users_router
 
-
 @asynccontextmanager 
 async def lifespan(app: FastAPI):
     SQLModel.metadata.create_all(engine)

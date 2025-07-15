@@ -3,6 +3,7 @@ from sqlmodel import Session, select
 from models.models import Question,Answer
 from db import get_session
 from utils import verifyToken
+from typing import List
 
 
 router = APIRouter(prefix="/questions", tags=["Questions"])
@@ -35,7 +36,7 @@ def edit_question(newquestion:Question,question_id: int, session: Session = Depe
     session.refresh(question)
     return question
 
-@router.get("/", response_model=Question)
+@router.get("/", response_model=List[Question])
 def get_all_questions(session: Session = Depends(get_session)):
     questions = session.exec(select(Question)).all()
     if not questions:
